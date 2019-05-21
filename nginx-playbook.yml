@@ -8,6 +8,8 @@
   connection: ssh
   gather_facts: yes
   tasks:
+  - name: Wait for automatic system updates
+    shell: while sudo fuser /var/lib/dpkg/lock >/dev/null 2>&1; do sleep 1; done;
   - name: Update and upgrade apt packages
     apt:
       upgrade: yes
