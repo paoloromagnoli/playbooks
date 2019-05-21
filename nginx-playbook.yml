@@ -1,3 +1,4 @@
+# works for ubuntu
 - name: Install NGINX
   hosts: all
   become: yes #become block is needed when non root account is used to access remote VMs, this is typical for AWS
