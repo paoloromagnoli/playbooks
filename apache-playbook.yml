@@ -28,5 +28,4 @@
       name: firewalld 
       state: restarted
   - name: Copying the demo file
-    template: src=/home/centos/playbooks/resources/index.html dest=/var/www/html
-owner=apache group=apache mode=0644
+    template: src=/home/centos/playbooks/resources/index.html dest=/var/www/html owner=apache group=apache mode=0644
