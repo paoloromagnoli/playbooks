@@ -1,8 +1,9 @@
+# works for centos
 - name: This sets up an httpd webserver
   hosts: all 
   connection: ssh
   gather_facts: yes
-  become: yes
+  become: yes #become block is needed when non root account is used to access remote VMs, this is typical for AWS
   become_user: root
   become_method: sudo
   tasks:
